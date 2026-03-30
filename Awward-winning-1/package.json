@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "locomotive-scroll": "^5.0.1",
-    "react-router-dom": "^7.13.2"
-  }
-}

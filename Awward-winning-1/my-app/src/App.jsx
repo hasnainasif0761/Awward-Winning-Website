@@ -1,14 +1,10 @@
 import React, { useEffect} from 'react'
 import { Routes, Route } from 'react-router-dom'
 import LocomotiveScroll from 'locomotive-scroll'
-import 'Locomotive-scroll/dist/locomotive-scroll.css'
 import Navbar from './components/Navbar'
+import Herosection from './components/Herosection'
+import Showcase from './components/Showcase'
 
-const Home = () => (
-  <>
-
-  </>
-)
 
 const App = () =>{
   useEffect(()=>{
@@ -20,6 +16,9 @@ const App = () =>{
   return (
     <>
     <Navbar />
+    <Herosection />
+    <Showcase />
+
     </>
   )
 }

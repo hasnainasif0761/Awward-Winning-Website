@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: one;
-  src: url("/6880585890e5a766b86eb9f6_SuisseIntl-SemiBold-WebM.ttf");
+  src: url("/68805858e095a766b86eb9f6_SuisseIntl-SemiBold-WebM.ttf");
 }
 @font-face {
   font-family: two;
@@ -23,9 +23,9 @@
 }
 .nav3
 {
-  font-family: three;
+  font-family: one;
 }
-.para
+.head
 {
-  font-family: two;
+  font-family: three;
 }
