@@ -3,16 +3,20 @@ import React, { useState, useEffect} from 'react'
 const LogoSlot = ({logo1, logo2, index}) =>{
     const [showFirst, setShowFirst] = useState(false);
 
-    useEffect(()=>{
-        const timeout = setTimeout(()=>{
-            const interval = setInterval(()=>{
-                setShowFirst((prev) => !prev)
-            },2000)
-            return () => clearInterval(interval);
-        }, index * 500);
+        useEffect(()=>{
+            let interval;
 
-        return () => clearTimeout(timeout);
-    }, [index]);
+            const timeout = setTimeout(()=>{
+                interval = setInterval(()=>{
+                    setShowFirst((prev) => !prev)
+                }, 2000)
+            }, index * 500);
+
+            return () => {
+                clearTimeout(timeout);
+                clearInterval(interval);
+            };
+        }, [index]);
 
     return (
         <div className='relative h-14 sm:h-16 lg:h-20 w-full flex justify-center items-center'>
@@ -22,7 +26,7 @@ const LogoSlot = ({logo1, logo2, index}) =>{
             className={`absolute h-full object-contain transition-all duration-100 ease-in-out ${showFirst ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
             />
             <img 
-            src=""
+            src={logo2}
             className={`absolute h-full object-contain transition-all duration-100 ease-in-out ${showFirst ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
             />
         </div>
@@ -49,8 +53,40 @@ const Showcase = () =>{
       img2: "https://cdn.prod.website-files.com/6881fafa34e37145092525b4/68a2d94dd39a1a3d6cba159b_LP-FOXRC-SKU-12-3-IMG-14-en-us-1627660864564%201.avif"
     }
   ];
+
+  return (
+    <section data-scroll
+    className='bg-[#FFD900] w-full px-5 sm:px-10 lg:px-16 py-12'
+    >
+    <div className='w-full overflow-hidden rounded-lg'>
+        <img 
+        data-scroll
+        data-scroll-speed="-0.3"
+        src="https://cdn.prod.website-files.com/6870db6428fa0046e4e9dc88/68820f0ab20497c5cbd8c39f_BlueSushiBham-4%201.avif"
+        alt="Showcase" 
+        className='w-full h-[60vh] sm:h-[70vh] lg:h-[110vh] object-cover'
+        />
+    </div>
+
+    <div className='nav3 mt-10 flex justify-center'>
+        <h3 className='text-center text-base sm:text-xl font-medium'>
+            Partners That Trust Our Work
+        </h3>
+    </div>
+
+    <div className='mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center'>
+        {
+            partners.map((pair, index)=>(
+                <LogoSlot
+                key={index}
+                logo1={pair.img1}
+                logo2={pair.img2}
+                index={index}
+                />
+            ))}
+    </div>
+</section>
+  )
 }
 
-
-
-export default LogoSlot
+export default Showcase
