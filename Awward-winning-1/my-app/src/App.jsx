@@ -7,6 +7,7 @@ import Herosection from './components/Herosection'
 import Showcase from './components/Showcase'
 import Ourwork from './components/Ourwork'
 import Projects from './components/Projects'
+import Services from './components/Services'
 
 
 const App = () =>{
@@ -23,6 +24,7 @@ const App = () =>{
     <Showcase />
     <Ourwork />
     <Projects />
+    <Services />
 
     </>
   )

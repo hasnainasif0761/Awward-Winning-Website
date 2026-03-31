@@ -41,7 +41,7 @@ const ProjectCard = ({ title, year, category, img }) => {
 
       {/* Text Content */}
       <div className="mt-4 flex flex-col sm:flex-row gap-3 sm:justify-between items-start sm:items-center">
-        <h4 className="text-xl sm:text-2xl font-bold uppercase tracking-tight text-gray-900">
+        <h4 className="nav text-xl sm:text-2xl font-bold uppercase tracking-tight text-gray-900">
           {title}
         </h4>
 
@@ -70,13 +70,13 @@ const Projects = () => {
       title: "Girl with the Pearl Earring",
       year: "2026",
       category: "Murals",
-      img: "https://cdn.prod.website-files.com/6881fafa34e37145092525b4/68a92151af03744c150497d6_68846b56c0101f3e615d65bd_CleanShot%25202024-11-09%2520at%252015.00.44-2.avif",
+      img: "https://cdn.prod.website-files.com/6881fafa34e37145092525b4/68a92151af03744c150497d2_689018689b2a5c926c179068_GirlwithPearlFinishedPhotosDSCF4282.avif",
     },
     {
       title: "Axel Row",
       year: "2022",
       category: "Murals",
-      img: "https://cdn.prod.website-files.com/6881fafa34e37145092525b4/68a92151af03744c150497d2_689018689b2a5c926c179068_GirlwithPearlFinishedPhotosDSCF4282.avif",
+      img: "https://cdn.prod.website-files.com/6881fafa34e37145092525b4/68a92151af03744c150497d6_68846b56c0101f3e615d65bd_CleanShot%25202024-11-09%2520at%252015.00.44-2.avif",
     },
   ];
 

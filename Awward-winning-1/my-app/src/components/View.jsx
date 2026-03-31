@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { FaArrowRight } from "react-icons/fa";
 
 const View = () => {
 
@@ -31,15 +32,17 @@ const View = () => {
                     <h1 className='nav font-light text-3xl sm:text-5xl lg:text-7xl uppercase text-black'>
                         View All Work
                     </h1>
-                    <h1 className='nav text-4xl sm:text-6xl lg:text-8xl'>
-                        ➡️➡️➡️
+                    <h1 className='nav flex text-4xl sm:text-6xl lg:text-8xl'>
+                        <FaArrowRight className='text-6xl' />
+                        <FaArrowRight className='text-6xl' />
+                        <FaArrowRight className='text-6xl' />
                     </h1>
                 </div>
 
                 <div className="relative h-[25vh] sm:h-[30vh] w-full sm:w-[40vw] lg:w-[20vw] bg-black mt-6 rounded-2xl overflow-hidden shadow-xl">
                     {images.map((src, idx) => (
                         <img src={src} key={src}
-                            className={`absolute inset-0 h-full object-cover transition-opacity duration-100 ease-in-out ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-100 ease-in-out ${idx === currentIndex ? 'opacity-60' : 'opacity-0'}`}
                             alt="" />
                     ))}
                 </div>
