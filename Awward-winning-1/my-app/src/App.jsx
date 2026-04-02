@@ -8,6 +8,9 @@ import Showcase from './components/Showcase'
 import Ourwork from './components/Ourwork'
 import Projects from './components/Projects'
 import Services from './components/Services'
+import Testimonial from './components/Testimonial'
+import Test from './components/Test'
+import Quote from './components/Quote'
 
 
 const App = () =>{
@@ -25,6 +28,9 @@ const App = () =>{
     <Ourwork />
     <Projects />
     <Services />
+    <Testimonial />
+    <Test />
+    <Quote />
 
     </>
   )

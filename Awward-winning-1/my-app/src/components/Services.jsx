@@ -1,4 +1,6 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa6";
+
 
 const Services = () =>{
     return(
@@ -43,6 +45,24 @@ const Services = () =>{
                     <h2 className="nav text-[13vw] sm:text-[10vw] uppercase">ghost sign</h2>
                     <div className="h-[20vh] w-full sm:w-[30vw] lg:w-[15vw] bg-black rounded overflow-hidden">
                         <img src="https://cdn.prod.website-files.com/6881fafa34e37145092525b4/68846aef020163d8a1e39d30_IMG_4225.avif" alt="" className="h-full w-full object-cover" />
+                    </div>
+                </div>
+
+                <div className="h-auto sm:h-[15vh] w-full flex justify-center items-center mt-10">
+                    <div className="h-auto sm:h-[10vh] flex flex-col sm:flex-row items-center gap-4 border-b-4 pb-4">
+                        <h4 className="nav text-4xl sm:text-7xl flex">
+                            <FaArrowRight />
+                            <FaArrowRight />
+                            <FaArrowRight />
+                        </h4>
+                        <h4 className="nav uppercase text-3xl sm:text-6xl text-center">
+                                Learn about out services
+                        </h4>
+                        <h4 className="nav text-4xl sm:text-7xl flex">
+                            <FaArrowRight />
+                            <FaArrowRight />
+                            <FaArrowRight />
+                        </h4>
                     </div>
                 </div>
 
